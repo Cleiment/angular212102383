@@ -1,30 +1,24 @@
-import {
-  Component,
-  HostBinding,
-  HostListener,
-  OnInit,
-  Renderer2,
-} from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css'],
+  selector: 'app-dashboard3',
+  templateUrl: './dashboard3.component.html',
+  styleUrls: ['./dashboard3.component.css'],
 })
-export class DashboardComponent implements OnInit {
+export class Dashboard3Component implements OnInit {
   nama = 'Cleimentinus Venti';
   nim = '212102383';
 
   constructor(private renderer: Renderer2) {
     this.renderer.removeClass(document.body, 'login-page');
     this.renderer.removeClass(document.body, 'sidebar-open');
-    this.renderer.removeClass(document.body, 'dark-mode');
+    this.renderer.addClass(document.body, 'dark-mode');
 
     document.getElementById('dashboard-script')?.remove();
 
     let scriptEl = document.createElement('script');
     scriptEl.id = 'dashboard-script';
-    scriptEl.src = 'assets/dist/js/pages/dashboard.js';
+    scriptEl.src = 'assets/dist/js/pages/dashboard3.js';
     this.renderer.appendChild(document.body, scriptEl);
   }
 
