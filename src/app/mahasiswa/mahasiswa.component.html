@@ -1,0 +1,62 @@
+<div class="wrapper">
+  <app-header></app-header>
+  <app-sidebar [moduleName]="'mahasiswa'"></app-sidebar>
+
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">
+              <strong>{{ nama }}</strong>
+            </h1>
+            <h5 class="m-0">{{ nim }}</h5>
+          </div>
+          <!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item">
+                <a routerLink="['/dashboard']">Home</a>
+              </li>
+              <li class="breadcrumb-item active">Mahasiswa</li>
+            </ol>
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <section class="content mb-3">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="table-responsive">
+            <table
+              id="table-mahasiswa"
+              class="table table-hover table-striped nowrap"
+            >
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>NIM</th>
+                  <th>Nama</th>
+                  <th>Jenis Kelamin</th>
+                  <th>Tempat, Tanggal Lahir</th>
+                  <th>JP</th>
+                  <th>Alamat</th>
+                  <th>Status</th>
+                  <th>Tahun Masuk</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <app-footer></app-footer>
+  </div>
+</div>

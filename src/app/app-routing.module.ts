@@ -6,6 +6,7 @@ import { RegisterComponent } from './register/register.component';
 import { AdminComponent } from './admin/admin.component';
 import { Dashboard2Component } from './dashboard2/dashboard2.component';
 import { Dashboard3Component } from './dashboard3/dashboard3.component';
+import { MahasiswaComponent } from './mahasiswa/mahasiswa.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'admin', component: AdminComponent },
+  { path: 'mahasiswa', component: MahasiswaComponent },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
 ];
 
